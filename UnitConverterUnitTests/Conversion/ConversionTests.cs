@@ -27,7 +27,7 @@ namespace UnitConverterUnitTests.Conversion
             var fromUnit = new Unit(category, from);
             var toUnit = new Unit(category, to);
 
-            Assert.Equal(Math.Round(expected, 2), Math.Round(_repo.Convert(fromUnit, toUnit, value), 2));
+            Assert.Equal(Math.Round(expected, 2), Math.Round(_repo.Convert(value, fromUnit, toUnit), 2));
         }
     }
 }

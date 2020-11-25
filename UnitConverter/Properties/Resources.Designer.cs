@@ -77,5 +77,14 @@ namespace Microsoft.UnitConverter.Properties {
                 return ResourceManager.GetString("Area_SquareMeter", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to m^2.
+        /// </summary>
+        internal static string Area_SquareMeter_Abbreviations {
+            get {
+                return ResourceManager.GetString("Area_SquareMeter_Abbreviations", resourceCulture);
+            }
+        }
     }
 }

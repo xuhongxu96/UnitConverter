@@ -5,6 +5,6 @@ namespace Microsoft.UnitConverter.Converters
     public interface IConverter
     {
         double ConvertToPivotValue(double value, Unit from);
-        double ConvertFromPivotValue(double value, Unit to);
+        double ConvertFromPivotValue(double pivotValue, Unit to);
     }
 }

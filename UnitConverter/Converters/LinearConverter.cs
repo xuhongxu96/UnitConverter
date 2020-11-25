@@ -27,15 +27,15 @@ namespace Microsoft.UnitConverter.Converters
             }
         }
 
-        public double ConvertFromPivotValue(double value, Unit to)
+        public double ConvertFromPivotValue(double pivotValue, Unit to)
         {
             if (_offsetFirst)
             {
-                return value / _ratio - _offset;
+                return pivotValue / _ratio - _offset;
             }
             else
             {
-                return (value - _offset) / _ratio;
+                return (pivotValue - _offset) / _ratio;
             }
         }
     }

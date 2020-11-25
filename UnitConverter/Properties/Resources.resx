@@ -123,4 +123,7 @@
   <data name="Area_SquareMeter" xml:space="preserve">
     <value>Square meter</value>
   </data>
+  <data name="Area_SquareMeter_Abbreviations" xml:space="preserve">
+    <value>m^2</value>
+  </data>
 </root>
