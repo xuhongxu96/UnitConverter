@@ -1,8 +1,10 @@
-﻿namespace Microsoft.UnitConverter.Converters
+﻿using Microsoft.UnitConverter.Models;
+
+namespace Microsoft.UnitConverter.Converters
 {
     public interface IConverter
     {
-        double ConvertToPivotValue(double value);
-        double ConvertFromPivotValue(double value);
+        double ConvertToPivotValue(double value, Unit from);
+        double ConvertFromPivotValue(double value, Unit to);
     }
 }

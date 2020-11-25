@@ -1,4 +1,6 @@
-﻿namespace Microsoft.UnitConverter.Converters
+﻿using Microsoft.UnitConverter.Models;
+
+namespace Microsoft.UnitConverter.Converters
 {
     public class LinearConverter : IConverter
     {
@@ -13,7 +15,7 @@
             _offsetFirst = offsetFirst;
         }
 
-        public double ConvertToPivotValue(double value)
+        public double ConvertToPivotValue(double value, Unit from)
         {
             if (_offsetFirst)
             {
@@ -25,7 +27,7 @@
             }
         }
 
-        public double ConvertFromPivotValue(double value)
+        public double ConvertFromPivotValue(double value, Unit to)
         {
             if (_offsetFirst)
             {

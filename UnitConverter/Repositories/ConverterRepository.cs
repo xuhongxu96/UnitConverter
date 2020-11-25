@@ -31,8 +31,8 @@ namespace Microsoft.UnitConverter.Repositories
                 throw new KeyNotFoundException(to.ToString());
             }
 
-            var pivot = fromConverter.ConvertToPivotValue(value);
-            return toConverter.ConvertFromPivotValue(pivot);
+            var pivot = fromConverter.ConvertToPivotValue(value, from);
+            return toConverter.ConvertFromPivotValue(pivot, to);
         }
 
         public static ConverterRepository Default { get; } = DefaultConverters.CreateRepository();

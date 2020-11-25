@@ -17,6 +17,10 @@ namespace UnitConverterUnitTests.Conversion
 
         [InlineData(nameof(Data), nameof(Data.Bit), nameof(Data.Byte), 32, 4)]
 
+        [InlineData(nameof(Power), nameof(Power.Kilowatt), nameof(Power.Horsepower), 12, 16.09227)]
+
+        [InlineData(nameof(Pressure), nameof(Pressure.Atmosphere), nameof(Pressure.Pascal), 20, 2026500)]
+
         public void TestConvert(string categoryName, string from, string to, double value, double expected)
         {
             var category = new Category(categoryName);
