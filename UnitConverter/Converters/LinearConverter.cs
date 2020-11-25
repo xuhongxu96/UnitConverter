@@ -4,9 +4,9 @@ namespace Microsoft.UnitConverter.Converters
 {
     public class LinearConverter : IConverter
     {
-        private double _offset;
-        private double _ratio;
-        private bool _offsetFirst;
+        private readonly double _offset;
+        private readonly double _ratio;
+        private readonly bool _offsetFirst;
 
         public LinearConverter(double offset = 0, double ratio = 1, bool offsetFirst = true)
         {
