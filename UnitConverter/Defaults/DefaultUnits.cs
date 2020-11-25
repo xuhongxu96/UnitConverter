@@ -1,10 +1,5 @@
 ﻿using Microsoft.UnitConverter.Models;
 using Microsoft.UnitConverter.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Microsoft.UnitConverter.Defaults
 {
