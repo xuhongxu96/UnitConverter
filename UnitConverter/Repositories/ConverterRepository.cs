@@ -25,7 +25,7 @@ namespace Microsoft.UnitConverter.Repositories
         {
             if (!_converters.TryGetValue(from, out var converter))
             {
-                throw new KeyNotFoundException(from.ToString());
+                throw new UnitNotFoundException(from.ToString());
             }
             return converter.ConvertToPivotValue(value, from);
         }
@@ -34,7 +34,7 @@ namespace Microsoft.UnitConverter.Repositories
         {
             if (!_converters.TryGetValue(to, out var converter))
             {
-                throw new KeyNotFoundException(to.ToString());
+                throw new UnitNotFoundException(to.ToString());
             }
             return converter.ConvertFromPivotValue(pivotValue, to);
         }
@@ -47,11 +47,11 @@ namespace Microsoft.UnitConverter.Repositories
             }
             if (!_converters.TryGetValue(from, out var fromConverter))
             {
-                throw new KeyNotFoundException(from.ToString());
+                throw new UnitNotFoundException(from.ToString());
             }
             if (!_converters.TryGetValue(to, out var toConverter))
             {
-                throw new KeyNotFoundException(to.ToString());
+                throw new UnitNotFoundException(to.ToString());
             }
 
             var pivot = fromConverter.ConvertToPivotValue(value, from);
@@ -65,7 +65,7 @@ namespace Microsoft.UnitConverter.Repositories
             {
                 if (!_converters.TryGetValue(unitValue.Unit, out var converter))
                 {
-                    throw new KeyNotFoundException(unitValue.Unit.ToString());
+                    throw new UnitNotFoundException(unitValue.Unit.ToString());
                 }
                 pivot += converter.ConvertToPivotValue(unitValue.Value, unitValue.Unit);
             }
@@ -80,7 +80,7 @@ namespace Microsoft.UnitConverter.Repositories
                 var unit = toUnits[i];
                 if (!_converters.TryGetValue(unit, out var converter))
                 {
-                    throw new KeyNotFoundException(unit.ToString());
+                    throw new UnitNotFoundException(unit.ToString());
                 }
 
                 var value = converter.ConvertFromPivotValue(pivotValue, unit);
