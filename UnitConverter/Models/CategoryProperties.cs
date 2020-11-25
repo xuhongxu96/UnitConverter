@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.UnitConverter.Properties;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +16,15 @@ namespace Microsoft.UnitConverter.Models
         }
 
         public Category Key { get; init; }
-        public ValueRange SupportsValueRange { get; init; } = ValueRange.All;
+        public string LocalizedName { get; init; }
+        public ValueRange SupportsValueRange { get; init; } = ValueRange.PositiveWithZero;
 
         public string Name => Key.Name;
+
+        public CategoryProperties(Category key)
+        {
+            Key = key;
+            LocalizedName = Resources.ResourceManager.GetString($"{key.Name}", CultureInfo.CurrentCulture);
+        }
     }
 }

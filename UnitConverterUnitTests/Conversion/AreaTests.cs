@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static Microsoft.UnitConverter.Defaults.DefaultUnits;
 
-namespace UnitConverterUnitTests
+namespace UnitConverterUnitTests.Conversion
 {
     public class AreaTests
     {

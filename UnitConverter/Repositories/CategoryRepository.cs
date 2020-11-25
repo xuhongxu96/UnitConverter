@@ -24,6 +24,11 @@ namespace Microsoft.UnitConverter.Repositories
             return this;
         }
 
+        public CategoryProperties Get(Category category)
+        {
+            return _categories[category];
+        }
+
         public static CategoryRepository Default { get; } = DefaultCategories.CreateRepository();
     }
 }
