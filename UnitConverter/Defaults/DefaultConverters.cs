@@ -10,7 +10,7 @@ namespace Microsoft.UnitConverter.Defaults
         {
             return converterRepository
                 .Add(Area.Acre, new LinearConverter(ratio: 4046.8564224))
-                .Add(Area.SquareMeter, new LinearConverter(ratio: 1))
+                .Add(Area.SquareMeter, new LinearConverter())
                 .Add(Area.SquareFoot, new LinearConverter(ratio: 0.09290304))
                 .Add(Area.SquareYard, new LinearConverter(ratio: 0.83612736))
                 .Add(Area.SquareMillimeter, new LinearConverter(ratio: 0.000001))
@@ -33,7 +33,7 @@ namespace Microsoft.UnitConverter.Defaults
                 .Add(Data.Bit, new LinearConverter(ratio: 0.000000125))
                 .Add(Data.Byte, new LinearConverter(ratio: 0.000001))
                 .Add(Data.Kilobyte, new LinearConverter(ratio: 0.001))
-                .Add(Data.Megabyte, new LinearConverter(ratio: 1))
+                .Add(Data.Megabyte, new LinearConverter())
                 .Add(Data.Gigabyte, new LinearConverter(ratio: 1000))
                 .Add(Data.Terabyte, new LinearConverter(ratio: 1000000))
                 .Add(Data.Petabyte, new LinearConverter(ratio: 1000000000))
@@ -78,7 +78,7 @@ namespace Microsoft.UnitConverter.Defaults
                 .Add(Energy.BritishThermalUnit, new LinearConverter(ratio: 1055.056))
                 .Add(Energy.Kilojoule, new LinearConverter(ratio: 1000))
                 .Add(Energy.ElectronVolt, new LinearConverter(ratio: 0.0000000000000000001602176565))
-                .Add(Energy.Joule, new LinearConverter(ratio: 1))
+                .Add(Energy.Joule, new LinearConverter())
                 .Add(Energy.FootPound, new LinearConverter(ratio: 1.3558179483314))
                 .Add(Energy.Battery, new LinearConverter(ratio: 9000))
                 .Add(Energy.Banana, new LinearConverter(ratio: 439614))
@@ -97,7 +97,7 @@ namespace Microsoft.UnitConverter.Defaults
                 .Add(Length.Millimeter, new LinearConverter(ratio: 0.001))
                 .Add(Length.Nanometer, new LinearConverter(ratio: 0.000000001))
                 .Add(Length.Centimeter, new LinearConverter(ratio: 0.01))
-                .Add(Length.Meter, new LinearConverter(ratio: 1))
+                .Add(Length.Meter, new LinearConverter())
                 .Add(Length.Kilometer, new LinearConverter(ratio: 1000))
                 .Add(Length.NauticalMile, new LinearConverter(ratio: 1852))
                 .Add(Length.Paperclip, new LinearConverter(ratio: 0.035052))
@@ -111,7 +111,7 @@ namespace Microsoft.UnitConverter.Defaults
             return converterRepository
                 .Add(Power.BritishThermalUnitPerMinute, new LinearConverter(ratio: 17.58426666666667))
                 .Add(Power.FootPoundPerMinute, new LinearConverter(ratio: 0.0225969658055233))
-                .Add(Power.Watt, new LinearConverter(ratio: 1))
+                .Add(Power.Watt, new LinearConverter())
                 .Add(Power.Kilowatt, new LinearConverter(ratio: 1000))
                 .Add(Power.Horsepower, new LinearConverter(ratio: 745.69987158227022))
                 .Add(Power.LightBulb, new LinearConverter(ratio: 60))
@@ -124,7 +124,7 @@ namespace Microsoft.UnitConverter.Defaults
         {
             return converterRepository
                 .Add(Time.Day, new LinearConverter(ratio: 86400))
-                .Add(Time.Second, new LinearConverter(ratio: 1))
+                .Add(Time.Second, new LinearConverter())
                 .Add(Time.Week, new LinearConverter(ratio: 604800))
                 .Add(Time.Year, new LinearConverter(ratio: 31557600))
                 .Add(Time.Millisecond, new LinearConverter(ratio: 0.001))
@@ -147,7 +147,7 @@ namespace Microsoft.UnitConverter.Defaults
                 .Add(Volume.Liter, new LinearConverter(ratio: 1000))
                 .Add(Volume.TeaspoonUS, new LinearConverter(ratio: 4.92892159375))
                 .Add(Volume.TablespoonUS, new LinearConverter(ratio: 14.78676478125))
-                .Add(Volume.CubicCentimeter, new LinearConverter(ratio: 1))
+                .Add(Volume.CubicCentimeter, new LinearConverter())
                 .Add(Volume.CubicYard, new LinearConverter(ratio: 764554.857984))
                 .Add(Volume.CubicMeter, new LinearConverter(ratio: 1000000))
                 .Add(Volume.Milliliter, new LinearConverter(ratio: 1))
@@ -166,7 +166,7 @@ namespace Microsoft.UnitConverter.Defaults
         public static ConverterRepository AddWeightConverters(this ConverterRepository converterRepository)
         {
             return converterRepository
-                .Add(Weight.Kilogram, new LinearConverter(ratio: 1))
+                .Add(Weight.Kilogram, new LinearConverter())
                 .Add(Weight.Hectogram, new LinearConverter(ratio: 0.1))
                 .Add(Weight.Decagram, new LinearConverter(ratio: 0.01))
                 .Add(Weight.Gram, new LinearConverter(ratio: 0.001))
@@ -190,7 +190,7 @@ namespace Microsoft.UnitConverter.Defaults
         public static ConverterRepository AddSpeedConverters(this ConverterRepository converterRepository)
         {
             return converterRepository
-                .Add(Speed.CentimetersPerSecond, new LinearConverter(ratio: 1))
+                .Add(Speed.CentimetersPerSecond, new LinearConverter())
                 .Add(Speed.FeetPerSecond, new LinearConverter(ratio: 30.48))
                 .Add(Speed.KilometersPerHour, new LinearConverter(ratio: 27.777777777777777777778))
                 .Add(Speed.Knot, new LinearConverter(ratio: 51.44))
@@ -206,7 +206,7 @@ namespace Microsoft.UnitConverter.Defaults
         public static ConverterRepository AddAngleConverters(this ConverterRepository converterRepository)
         {
             return converterRepository
-                .Add(Angle.Degree, new LinearConverter(ratio: 1))
+                .Add(Angle.Degree, new LinearConverter())
                 .Add(Angle.Radian, new LinearConverter(ratio: 57.29577951308233))
                 .Add(Angle.Gradian, new LinearConverter(ratio: 0.9))
                 ;
@@ -215,12 +215,20 @@ namespace Microsoft.UnitConverter.Defaults
         public static ConverterRepository AddPressureConverters(this ConverterRepository converterRepository)
         {
             return converterRepository
-                .Add(Pressure.Atmosphere, new LinearConverter(ratio: 1))
+                .Add(Pressure.Atmosphere, new LinearConverter())
                 .Add(Pressure.Bar, new LinearConverter(ratio: 0.9869232667160128))
                 .Add(Pressure.KiloPascal, new LinearConverter(ratio: 0.0098692326671601))
                 .Add(Pressure.MillimeterOfMercury, new LinearConverter(ratio: 0.0013155687145324))
                 .Add(Pressure.Pascal, new LinearConverter(ratio: 9.869232667160128e-6))
                 .Add(Pressure.PSI, new LinearConverter(ratio: 0.068045961016531))
+                ;
+        }
+
+        public static ConverterRepository AddTemperatureConverters(this ConverterRepository converterRepository)
+        {
+            return converterRepository
+                .Add(Temperature.Celsius, new LinearConverter())
+                .Add(Temperature.Fahrenheit, new LinearConverter(offset: -32, ratio: 5.0 / 9, offsetFirst: true))
                 ;
         }
 
@@ -239,6 +247,7 @@ namespace Microsoft.UnitConverter.Defaults
                 .AddSpeedConverters()
                 .AddAngleConverters()
                 .AddPressureConverters()
+                .AddTemperatureConverters()
                 ;
         }
     }

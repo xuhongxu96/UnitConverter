@@ -224,6 +224,14 @@ namespace Microsoft.UnitConverter.Defaults
             public static readonly Unit PSI = new Unit(_cat, nameof(PSI));
         }
 
+        public static class Temperature
+        {
+            private static readonly Category _cat = DefaultCategories.Temperature;
+
+            public static readonly Unit Celsius = new Unit(_cat, nameof(Celsius));
+            public static readonly Unit Fahrenheit = new Unit(_cat, nameof(Fahrenheit));
+        }
+
         public static UnitRepository AddAreaUnits(this UnitRepository unitRepository)
         {
             return unitRepository
@@ -442,6 +450,14 @@ namespace Microsoft.UnitConverter.Defaults
                ;
         }
 
+        public static UnitRepository AddTemperatureUnits(this UnitRepository unitRepository)
+        {
+            return unitRepository
+                .Add(new UnitProperties(Temperature.Celsius))
+                .Add(new UnitProperties(Temperature.Fahrenheit))
+                ;
+        }
+
         public static UnitRepository CreateRepository()
         {
             var res = new UnitRepository();
@@ -457,6 +473,7 @@ namespace Microsoft.UnitConverter.Defaults
                 .AddSpeedUnits()
                 .AddAngleUnits()
                 .AddPressureUnits()
+                .AddTemperatureUnits()
                 ;
         }
     }
