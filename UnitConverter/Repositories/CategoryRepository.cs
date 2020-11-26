@@ -9,6 +9,12 @@ namespace Microsoft.UnitConverter.Repositories
     {
         private readonly Dictionary<Category, CategoryProperties> _categories = new Dictionary<Category, CategoryProperties>();
 
+        public CategoryRepository Clear()
+        {
+            _categories.Clear();
+            return this;
+        }
+
         public CategoryRepository Add(CategoryProperties category)
         {
             if (_categories.ContainsKey(category.Key))
@@ -18,6 +24,12 @@ namespace Microsoft.UnitConverter.Repositories
 
             _categories.Add(category.Key, category);
             return this;
+        }
+
+        public CategoryProperties this[Category category]
+        {
+            get => _categories[category];
+            set => _categories[category] = value;
         }
 
         public CategoryProperties Get(Category category)

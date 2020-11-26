@@ -9,6 +9,12 @@ namespace Microsoft.UnitConverter.Repositories
     {
         private readonly Dictionary<Unit, UnitProperties> _units = new Dictionary<Unit, UnitProperties>();
 
+        public UnitRepository Clear()
+        {
+            _units.Clear();
+            return this;
+        }
+
         public UnitRepository Add(UnitProperties unit)
         {
             if (_units.ContainsKey(unit.Key))
@@ -18,6 +24,12 @@ namespace Microsoft.UnitConverter.Repositories
 
             _units.Add(unit.Key, unit);
             return this;
+        }
+
+        public UnitProperties this[Unit unit]
+        {
+            get => _units[unit];
+            set => _units[unit] = value;
         }
 
         public static UnitRepository Default { get; } = DefaultUnits.CreateRepository();

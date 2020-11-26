@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitConverter", "UnitConver
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitConverterUnitTests", "UnitConverterUnitTests\UnitConverterUnitTests.csproj", "{826EAE74-9D3E-4370-8404-1A0E52A90EEB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitConverter.Currency", "UnitConverter.Currency\UnitConverter.Currency.csproj", "{F5710276-C65F-48E7-8A26-FFEF6844A831}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{826EAE74-9D3E-4370-8404-1A0E52A90EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{826EAE74-9D3E-4370-8404-1A0E52A90EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{826EAE74-9D3E-4370-8404-1A0E52A90EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5710276-C65F-48E7-8A26-FFEF6844A831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5710276-C65F-48E7-8A26-FFEF6844A831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5710276-C65F-48E7-8A26-FFEF6844A831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5710276-C65F-48E7-8A26-FFEF6844A831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

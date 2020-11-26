@@ -19,10 +19,9 @@ namespace Microsoft.UnitConverter.Defaults
         public static readonly Category Pressure = new Category(nameof(Pressure));
         public static readonly Category Temperature = new Category(nameof(Temperature));
 
-        public static CategoryRepository CreateRepository()
+        public static CategoryRepository AddDefaultCategories(this CategoryRepository categoryRepository)
         {
-            var res = new CategoryRepository();
-            return res
+            return categoryRepository
                 .Add(new CategoryProperties(Area))
                 .Add(new CategoryProperties(Data))
                 .Add(new CategoryProperties(Energy))
@@ -36,6 +35,11 @@ namespace Microsoft.UnitConverter.Defaults
                 .Add(new CategoryProperties(Pressure))
                 .Add(new CategoryProperties(Temperature) { SupportsValueRange = ValueRange.All })
                 ;
+        }
+
+        public static CategoryRepository CreateRepository()
+        {
+            return new CategoryRepository().AddDefaultCategories();
         }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using Microsoft.UnitConverter.Models;
 using Microsoft.UnitConverter.Repositories;
 using System;
+using UnitConverter.Currency.Defaults;
+using UnitConverter.Currency.Loaders;
+using UnitConverterUnitTests.Mocks;
 using Xunit;
 using static Microsoft.UnitConverter.Defaults.DefaultUnits;
 
@@ -24,7 +27,6 @@ namespace UnitConverterUnitTests.Conversion
         [InlineData(nameof(Temperature), nameof(Temperature.Celsius), nameof(Temperature.Fahrenheit), 1, 33.8)]
         [InlineData(nameof(Temperature), nameof(Temperature.Celsius), nameof(Temperature.Fahrenheit), 32, 89.6)]
         [InlineData(nameof(Temperature), nameof(Temperature.Fahrenheit), nameof(Temperature.Celsius), 100, 37.778)]
-
         public void TestConvert(string categoryName, string from, string to, double value, double expected)
         {
             var category = new Category(categoryName);

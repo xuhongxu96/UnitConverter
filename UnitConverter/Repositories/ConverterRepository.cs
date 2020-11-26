@@ -11,6 +11,12 @@ namespace Microsoft.UnitConverter.Repositories
     {
         private readonly Dictionary<Unit, IConverter> _converters = new Dictionary<Unit, IConverter>();
 
+        public ConverterRepository Clear()
+        {
+            _converters.Clear();
+            return this;
+        }
+
         public ConverterRepository Add(Unit unit, IConverter converter)
         {
             if (_converters.ContainsKey(unit))
@@ -19,6 +25,12 @@ namespace Microsoft.UnitConverter.Repositories
             }
             _converters.Add(unit, converter);
             return this;
+        }
+
+        public IConverter this[Unit unit]
+        {
+            get => _converters[unit];
+            set => _converters[unit] = value;
         }
 
         public double ConvertToPivotValue(double value, Unit from)
