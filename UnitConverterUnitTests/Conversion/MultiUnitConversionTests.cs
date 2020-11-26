@@ -2,6 +2,7 @@
 using Microsoft.UnitConverter.Repositories;
 using System;
 using System.Linq;
+using UnitConverterUnitTests.Utils;
 using Xunit;
 using static Microsoft.UnitConverter.Defaults.DefaultUnits;
 
@@ -35,7 +36,7 @@ namespace UnitConverterUnitTests.Conversion
             }
 
             var pivot = _repo.ConvertMultiUnitsToPivotValue(fromUnits);
-            Assert.Equal(Math.Round(expected, 2), Math.Round(_repo.ConvertFromPivotValue(pivot, toUnit), 2));
+            Assert.Equal(expected, _repo.ConvertFromPivotValue(pivot, toUnit), precision: 2);
         }
 
         [Theory]
@@ -57,7 +58,7 @@ namespace UnitConverterUnitTests.Conversion
                 to.Select(o => new Unit(category, o)).ToArray()
                 );
 
-            Assert.Equal(expected.Select(o => Math.Round(o, 2)), res.Select(o => Math.Round(o, 2)));
+            Assert.Equal(expected, res, new RoundedDoubleComparer());
         }
 
         [Theory]
@@ -86,7 +87,7 @@ namespace UnitConverterUnitTests.Conversion
             var pivot = _repo.ConvertMultiUnitsToPivotValue(fromUnits);
             var res = _repo.ConvertPivotValueToMultiUnits(pivot, to.Select(o => new Unit(category, o)).ToArray());
 
-            Assert.Equal(expected.Select(o => Math.Round(o, 2)), res.Select(o => Math.Round(o, 2)));
+            Assert.Equal(expected, res, new RoundedDoubleComparer());
         }
     }
 }

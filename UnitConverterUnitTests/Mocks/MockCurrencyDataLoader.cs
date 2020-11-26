@@ -10,6 +10,8 @@ namespace UnitConverterUnitTests.Mocks
 {
     public class MockCurrencyDataLoader : ICurrencyDataLoader
     {
+        private static Random _rnd = new Random();
+
         public Task<List<CurrencyConverterItem>> LoadCurrencyConverterItem()
         {
             return Task.FromResult(new List<CurrencyConverterItem>
@@ -24,6 +26,7 @@ namespace UnitConverterUnitTests.Mocks
                 new CurrencyConverterItem("MER", 2.00),
                 new CurrencyConverterItem("JPY", 0.00125),
                 new CurrencyConverterItem("JOD", 0.25),
+                new CurrencyConverterItem("RND", _rnd.NextDouble()),
             });
         }
 
@@ -109,6 +112,14 @@ namespace UnitConverterUnitTests.Mocks
                     CountryName = "Test Fractional Digits",
                     CurrencyCode = "JOD",
                     CurrencyName = "Test Factional Digits",
+                    CurrencySymbol = "$",
+                },
+                new CurrencyItem
+                {
+                    CountryCode = "RND",
+                    CountryName = "Random ratio",
+                    CurrencyCode = "RND",
+                    CurrencyName = "Random ratio",
                     CurrencySymbol = "$",
                 },
             });
