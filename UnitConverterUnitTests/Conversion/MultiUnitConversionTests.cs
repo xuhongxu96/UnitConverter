@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UnitConverter.Models;
 using UnitConverter.Repositories;
 using UnitConverterUnitTests.Utils;

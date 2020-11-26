@@ -1,9 +1,5 @@
 ﻿using UnitConverter.Models;
-using System;
-using UnitConverter.Currency.Defaults;
-using UnitConverter.Currency.Loaders;
 using UnitConverter.Repositories;
-using UnitConverterUnitTests.Mocks;
 using Xunit;
 using static UnitConverter.Defaults.DefaultUnits;
 
