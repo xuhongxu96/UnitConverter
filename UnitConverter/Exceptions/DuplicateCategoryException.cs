@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Microsoft.UnitConverter.Exceptions
+namespace UnitConverter.Exceptions
 {
     public class DuplicateCategoryException : Exception
     {

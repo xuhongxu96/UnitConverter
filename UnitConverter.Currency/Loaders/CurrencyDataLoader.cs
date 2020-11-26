@@ -1,6 +1,6 @@
-﻿using Microsoft.UnitConverter.Converters;
-using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
+﻿using UnitConverter.Converters;
+using UnitConverter.Models;
+using UnitConverter.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

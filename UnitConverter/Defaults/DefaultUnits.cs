@@ -1,7 +1,7 @@
-﻿using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
+﻿using UnitConverter.Models;
+using UnitConverter.Repositories;
 
-namespace Microsoft.UnitConverter.Defaults
+namespace UnitConverter.Defaults
 {
     public static class DefaultUnits
     {

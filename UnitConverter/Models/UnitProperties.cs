@@ -1,8 +1,8 @@
-﻿using Microsoft.UnitConverter.Properties;
-using System;
+﻿using System;
 using System.Globalization;
+using UnitConverter.Properties;
 
-namespace Microsoft.UnitConverter.Models
+namespace UnitConverter.Models
 {
     public class UnitProperties
     {

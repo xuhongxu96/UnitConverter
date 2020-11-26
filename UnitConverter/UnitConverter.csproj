@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>Microsoft.UnitConverter</RootNamespace>
+        <RootNamespace>UnitConverter</RootNamespace>
         <LangVersion>9</LangVersion>
     </PropertyGroup>
 
@@ -10,7 +10,7 @@
         <Compile Update="Properties\Resources.*Designer.cs">
             <DesignTime>True</DesignTime>
             <AutoGen>True</AutoGen>
-            <DependentUpon>$([System.String]::new(&quot;%(Filename)&quot;).Substring(0, $([MSBuild]::Subtract($([System.String]::new(&quot;%(Filename)&quot;).Length), 9)))).resx</DependentUpon>
+            <DependentUpon>$([System.String]::new("%(Filename)").Substring(0, $([MSBuild]::Subtract($([System.String]::new("%(Filename)").Length), 9)))).resx</DependentUpon>
         </Compile>
     </ItemGroup>
 
@@ -21,9 +21,15 @@
         </EmbeddedResource>
         <EmbeddedResource Update="Properties\Resources.*.resx">
             <Generator>ResXFileCodeGenerator</Generator>
-            <Culture>$([System.String]::new(&quot;%(FileName)&quot;).Split('.')[1])</Culture>
+            <Culture>$([System.String]::new("%(FileName)").Split('.')[1])</Culture>
             <WithCulture>true</WithCulture>
         </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Properties\Resources.Designer.cs">
+            <DesignTime>True</DesignTime>
+        </Compile>
     </ItemGroup>
 
 </Project>

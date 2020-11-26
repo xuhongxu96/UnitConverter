@@ -1,10 +1,10 @@
-﻿using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
+﻿using UnitConverter.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnitConverter.Repositories;
 
 namespace UnitConverter.Currency.Defaults
 {

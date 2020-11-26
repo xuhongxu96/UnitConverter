@@ -1,8 +1,8 @@
-﻿using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
-using static Microsoft.UnitConverter.Models.CategoryProperties;
+﻿using UnitConverter.Models;
+using UnitConverter.Repositories;
+using static UnitConverter.Models.CategoryProperties;
 
-namespace Microsoft.UnitConverter.Defaults
+namespace UnitConverter.Defaults
 {
     public static class DefaultCategories
     {

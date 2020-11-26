@@ -1,10 +1,10 @@
-﻿using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
-using System;
+﻿using System;
 using System.Linq;
+using UnitConverter.Models;
+using UnitConverter.Repositories;
 using UnitConverterUnitTests.Utils;
 using Xunit;
-using static Microsoft.UnitConverter.Defaults.DefaultUnits;
+using static UnitConverter.Defaults.DefaultUnits;
 
 namespace UnitConverterUnitTests.Conversion
 {

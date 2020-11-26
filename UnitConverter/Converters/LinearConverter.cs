@@ -1,6 +1,6 @@
-﻿using Microsoft.UnitConverter.Models;
+﻿using UnitConverter.Models;
 
-namespace Microsoft.UnitConverter.Converters
+namespace UnitConverter.Converters
 {
     public class LinearConverter : IConverter
     {
@@ -23,7 +23,7 @@ namespace Microsoft.UnitConverter.Converters
             }
             else
             {
-                return (value * _ratio) + _offset;
+                return value * _ratio + _offset;
             }
         }
 

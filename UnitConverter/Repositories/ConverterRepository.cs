@@ -1,11 +1,11 @@
-﻿using Microsoft.UnitConverter.Converters;
-using Microsoft.UnitConverter.Defaults;
-using Microsoft.UnitConverter.Exceptions;
-using Microsoft.UnitConverter.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using UnitConverter.Converters;
+using UnitConverter.Defaults;
+using UnitConverter.Exceptions;
+using UnitConverter.Models;
 
-namespace Microsoft.UnitConverter.Repositories
+namespace UnitConverter.Repositories
 {
     public class ConverterRepository
     {

@@ -1,9 +1,9 @@
-﻿using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using UnitConverter.Currency.Defaults;
 using UnitConverter.Currency.Loaders;
+using UnitConverter.Models;
+using UnitConverter.Repositories;
 using UnitConverterUnitTests.Fixtures;
 using UnitConverterUnitTests.Mocks;
 using Xunit;

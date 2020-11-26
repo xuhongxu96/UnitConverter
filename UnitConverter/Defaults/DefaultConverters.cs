@@ -1,8 +1,8 @@
-﻿using Microsoft.UnitConverter.Converters;
-using Microsoft.UnitConverter.Repositories;
-using static Microsoft.UnitConverter.Defaults.DefaultUnits;
+﻿using UnitConverter.Converters;
+using UnitConverter.Repositories;
+using static UnitConverter.Defaults.DefaultUnits;
 
-namespace Microsoft.UnitConverter.Defaults
+namespace UnitConverter.Defaults
 {
     public static class DefaultConverters
     {

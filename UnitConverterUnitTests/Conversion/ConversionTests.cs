@@ -1,11 +1,11 @@
-﻿using Microsoft.UnitConverter.Models;
-using Microsoft.UnitConverter.Repositories;
+﻿using UnitConverter.Models;
 using System;
 using UnitConverter.Currency.Defaults;
 using UnitConverter.Currency.Loaders;
+using UnitConverter.Repositories;
 using UnitConverterUnitTests.Mocks;
 using Xunit;
-using static Microsoft.UnitConverter.Defaults.DefaultUnits;
+using static UnitConverter.Defaults.DefaultUnits;
 
 namespace UnitConverterUnitTests.Conversion
 {

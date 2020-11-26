@@ -1,9 +1,9 @@
-﻿using Microsoft.UnitConverter.Defaults;
-using Microsoft.UnitConverter.Exceptions;
-using Microsoft.UnitConverter.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnitConverter.Defaults;
+using UnitConverter.Exceptions;
+using UnitConverter.Models;
 
-namespace Microsoft.UnitConverter.Repositories
+namespace UnitConverter.Repositories
 {
     public class CategoryRepository
     {

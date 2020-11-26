@@ -1,4 +1,4 @@
-﻿namespace Microsoft.UnitConverter.Models
+﻿namespace UnitConverter.Models
 {
     public record Category(string Name);
 }

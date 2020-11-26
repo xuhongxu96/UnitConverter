@@ -1,6 +1,6 @@
-﻿using Microsoft.UnitConverter.Defaults;
-using Microsoft.UnitConverter.Models;
+﻿using UnitConverter.Models;
 using System.Globalization;
+using UnitConverter.Defaults;
 using Xunit;
 
 namespace UnitConverterUnitTests.Localization
