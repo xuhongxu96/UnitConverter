@@ -7,10 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Update="Properties\Resources.Designer.cs">
+        <Compile Update="Properties\Resources.*Designer.cs">
             <DesignTime>True</DesignTime>
             <AutoGen>True</AutoGen>
-            <DependentUpon>Resources.resx</DependentUpon>
+            <DependentUpon>$([System.String]::new(&quot;%(Filename)&quot;).Substring(0, $([MSBuild]::Subtract($([System.String]::new(&quot;%(Filename)&quot;).Length), 9)))).resx</DependentUpon>
         </Compile>
     </ItemGroup>
 
@@ -19,9 +19,9 @@
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
         </EmbeddedResource>
-        <EmbeddedResource Update="Properties\Resources.zh-CN.resx">
+        <EmbeddedResource Update="Properties\Resources.*.resx">
             <Generator>ResXFileCodeGenerator</Generator>
-            <Culture>zh-CN</Culture>
+            <Culture>$([System.String]::new(&quot;%(FileName)&quot;).Split('.')[1])</Culture>
             <WithCulture>true</WithCulture>
         </EmbeddedResource>
     </ItemGroup>
